@@ -6,7 +6,7 @@ const h1 = document.querySelector('h1');
 // const h1 = document.getElementById('h1');
 const p = document.querySelector('p');
 const parrafito = document.querySelector('.parrafito');
-const parrafId = document.querySelector('#parrafId');
+const parrfId = document.querySelector('#parrfId');
 const input = document.querySelector('input');
 
 console.log(h1);
@@ -16,6 +16,28 @@ console.log({
     h1,
     p,
     parrafito,
-    parrafId,
+    parrfId,
     input
 });
+
+// escribir HTML desde JS
+h1.innerHTML = 'Patito <br /> Feo';
+h1.innerText = 'Patito <br /> Feo';
+
+console.log(h1.getAttribute('licuadora')); // lee alguno de los atributos que tiene el elemento html
+h1.setAttribute('mi_color', 'morado'); // agrega o reemplaza un atributo al elemento html
+
+h1.classList.add('miClase'); // agrega una clase al elemento HTML sin remover o reemplazar clases
+h1.classList.add('miOtraClase'); // agrega una clase al elemento HTML sin remover o reemplazar clases
+h1.classList.remove('clase_default'); // elimina una clase del elemento HTML
+
+input.value = 'Nuevo Valor 0000'; // cambia el valor del elemento HTML input
+
+console.log(document.createElement('span')); // crea un elemento HTML
+
+const imagen = document.createElement('img');
+imagen.setAttribute('src', 'https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg');
+console.log(imagen);
+
+// parrfId.innerHTML = ''; 
+parrfId.append(imagen);
