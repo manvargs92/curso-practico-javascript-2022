@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manipulación del DOM básica</title>
   </head>
-  <body>
+  <input>
     <h1 class="clase_default" licuadora="LicuadorasNinja">Manipulación del DOM básica</h1>
 
     <p>Esto es un párrafo.</p>
@@ -14,6 +14,16 @@
     <p id="parrfId">Esto es un párrafo con un id.</p>
 
     <input type="text" placeholder="Escribe algo aquí..." value="abc123" />
+
+    <br>
+    <br>
+    <hr>
+
+    <!-- Escuchar eventos -->
+    <input type="number" id="input1" onchange="console.log('El input1 ha cambiado')"></input>
+    <input type="number" id="input2">
+    <button id="botonCalcular" onclick="escucharBoton()">Calcular</button>
+    <p id="parrResultado"></p>
 
     <!-- Conectar JavaScript con HTML -->
     <script src="./script.js"></script>

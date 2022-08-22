@@ -20,7 +20,7 @@ console.log({
     input
 });
 
-// escribir HTML desde JS
+/** Escribir HTML desde JS **/
 h1.innerHTML = 'Patito <br /> Feo';
 h1.innerText = 'Patito <br /> Feo';
 
@@ -36,8 +36,22 @@ input.value = 'Nuevo Valor 0000'; // cambia el valor del elemento HTML input
 console.log(document.createElement('span')); // crea un elemento HTML
 
 const imagen = document.createElement('img');
-imagen.setAttribute('src', 'https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg');
+// imagen.setAttribute('src', 'https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg');
 console.log(imagen);
 
 // parrfId.innerHTML = ''; 
 parrfId.append(imagen);
+
+/** Eventos en JavaScript **/
+const input1 = document.querySelector('#input1');
+const input2 = document.querySelector('#input2');
+const botonCalcular = document.querySelector('#botonCalcular');
+const parrResultado = document.querySelector('#parrResultado');
+
+// escuchar eventos
+function escucharBoton() {
+    const suma = Number(input1.value) + Number(input2.value);
+    console.log('Botón pulsado...');
+    console.log(suma);
+    parrResultado.innerText = 'El resultado de la suma es: ' + suma;
+}
