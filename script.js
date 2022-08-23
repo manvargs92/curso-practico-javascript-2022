@@ -46,12 +46,25 @@ parrfId.append(imagen);
 const input1 = document.querySelector('#input1');
 const input2 = document.querySelector('#input2');
 const botonCalcular = document.querySelector('#botonCalcular');
+const botonCalcular2 = document.querySelector('#botonCalcular2');
 const parrResultado = document.querySelector('#parrResultado');
+const formulario = document.querySelector('#formulario');
 
 // escuchar eventos
 function escucharBoton() {
     const suma = Number(input1.value) + Number(input2.value);
     console.log('Botón pulsado...');
     console.log(suma);
+    parrResultado.innerText = 'El resultado de la suma es: ' + suma;
+}
+
+/** addEventListener */
+botonCalcular2.addEventListener('click', escucharBoton); // escucha cada vez que suceda cierto evento
+formulario.addEventListener('submit', sumarInputValues);
+
+function sumarInputValues(evento) {
+    console.log({evento});
+    evento.preventDefault();
+    const suma = Number(input1.value) + Number(input2.value);
     parrResultado.innerText = 'El resultado de la suma es: ' + suma;
 }
